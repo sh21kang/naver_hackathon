@@ -93,78 +93,7 @@ def bind_model(model):
         # return 0
         return list(zip(range(len(retrieval_results)), retrieval_results.items()))
     nsml.bind(save=save, load=load, infer=infer)
-    # def infer(queries, db):
-    #     queries = [v.split('/')[-1].split('.')[0] for v in queries]
-    #     print("len(queries):",len(queries))
-    #     print("queries[0],[1],[2],[3]",queries[0],queries[1],queries[2])
-    #     db = [v.split('/')[-1].split('.')[0] for v in db]
-    #     print("len(db):",len(db))
-    #     print("db[0],[1],[2],[3]",db[0],db[1],db[2])
-    #     queries.sort()
-    #     db.sort()
-    #     # print('queries: ',queries)
-    #     # print('db: ',db)
-    #     queries, query_vecs, references, reference_vecs = get_feature(model, queries, db)
-    #     # print('queries: ',queries)
-    #     # print('references : ',references)
-    #     # l2 normalization
-    #     query_vecs = l2_normalize(query_vecs)
-    #     print('len(query_vecs)',len(query_vecs))
-    #     # print('query_vecs = l2_normalize(query_vecs):\n', query_vecs)
-    #     reference_vecs = l2_normalize(reference_vecs)
-    #     # print('reference_vecs = l2_normalize(reference_vecs)\n', reference_vecs)
-    #     print('len(reference_vecs',len(reference_vecs))
-    #     # Calculate cosine similarity
-    #     sim_matrix = np.dot(query_vecs, reference_vecs.T)
-    #     # print('sim_matrix = np.dot(query_vecs, reference_vecs.T):\n', sim_matrix)
-    #     indices = np.argsort(sim_matrix, axis=1)
-    #     # print('indices = np.argsort(sim_matrix, axis=1)\n',indices)
-    #     indices = np.flip(indices, axis=1)
-    #     # print('indices = np.flip(indices, axis=1)\n',indices)
-    #     retrieval_results = {}
-    #     queries2_vecs=[]
-
-    #     key=list(range(len(reference_vecs)))
-    #     for i in list:
-    #         answer_dict=dict
-    #     answer_sheet=[1 for j in range(len(reference_vecs))]
-    #     new_indices=[[-1 for j in range(1000)] for i in range(len(queries))]
-    #     for (i, query) in enumerate(queries):
-    #         ranked_list = [references[k] for k in indices[i]]
-    #         ranked_list = ranked_list[:1000]
-    #         retrieval_results[query] = ranked_list
-    #         # print('retrieval_results[{1}] = {2}'.format(query,ranked_list))
-    #         queries2_vecs.append(reference_vecs[indices[i][0]])
-        
-    #     sim_matrix2=np.dot(queries2_vecs, reference_vecs.T)
-    #     indices2 = np.argsort(sim_matrix2, axis=1)
-    #     indices2 = np.flip(indices2, axis=1)
-    #     retrieval_results2 = {}
-
-    #     for (i, query) in enumerate(queries):
-    #         ranked_list2 = [references[k] for k in indices2[i]]
-    #         ranked_list2 = ranked_list[:1000]
-    #         retrieval_results2[query] = ranked_list2
     
-
-    #     for i in range(len(queries)) :
-    #         for j in range(1000) :
-    #             answer_sh
-                    
-    #     # threshold=2
-    #     # count=0
-    #     # for limit in range(threshold,0,-1) :
-    #     #     for i in range(len(queries)) :
-    #     #         for j in range(len(indices)) :
-    #     #             if indices[i][j] == threshold :
-    #     #                 new_indices[i][count]=indices[i][j]
-    #     #                 count+=1
-
-                
-    #     return list(zip(range(len(retrieval_results)), retrieval_results.items()))
-
-    # DONOTCHANGE: They are reserved for nsml
-        
 
 
 
